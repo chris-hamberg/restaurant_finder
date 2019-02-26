@@ -1,4 +1,5 @@
 from urllib.request import urlopen
+from key import key
 import sys, json, csv
 import speech
 
@@ -43,7 +44,7 @@ class Places:
     '''
     def __init__(self):
         self.url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?'
-        self.key = 'AIzaSyD6-IKY0GoGYDNDkLmkeuaxkirnBE0839Q'
+        self.key = key
         self.radius = '1000'
         self.type = 'restaurant'
         self.params = 'location={self.lat},{self.lon}&radius={self.radius}'+\
